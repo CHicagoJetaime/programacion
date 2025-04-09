@@ -4,7 +4,7 @@ CREATE TABLE usuario (
     nombre completo VARCHAR(100),
     numero de control INT(20),
     grupo VARCHAR(3),
-    semestre VARCHAR(20),
+    carrera VARCHAR(20),
     nombre de usuario VARHCAR(20)
 );
 
