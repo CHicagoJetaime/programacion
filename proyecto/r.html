@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina De Registro</title>
+    <style>
+    body {
+        background-image: url('../img/nashe.jpeg');
+        background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center; 
+    }
+    h1{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: rgb(80, 80, 00); 
+            font-size: 500px;
+            text-align: center;
+    }
+    .form-label{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: rgb(80, 80, 00); 
+            font-size: 24px;
+        }
+</style>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <h1><B><U><i>Registrate.</U></B></i></h1><br>
+    <form class="row g-3">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Correo Electronico:</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Ingresa Tu Correo">
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Contraseña:</label>
+          <input type="password" class="form-control" id="Ingresa Tu COntraseña">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Nombre Completo:</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="Empezando Por Apellidos">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">Numero De Control:</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Ingresa Tu Numero De Control">
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">Grupo:</label>
+          <input type="text" class="form-control" id="inputCity" placeholder="Ingresa Tu Grupo">
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">Semestre:</label>
+          <select id="inputState" class="form-select">
+            <option selected></option>
+  <option value="">1er Semestre</option>
+  <option value="">2do Semestre</option>
+  <option value="">3er Semestre</option>
+  <option value="">4to Semestre</option>
+  <option value="">5to Semestre</option>
+  <option value="">6to Semestre</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label for="inputZip" class="form-label">Nombre De Usuario</label>
+          <input type="text" class="form-control" id="Puedes Ingresar Algun Apodo, O Como Te Gusta Que Te digan">
+        </div>
+            <div class="d-grid gap-2">
+<script>
+    function redirigir() {
+        const usuarioValido = true;
+        if (usuarioValido) {
+            alert("Registro de sesión exitoso. Redirigiendo...");
+            window.location.href = "../proyecto/pp.html";
+        } else {
+            alert("Error en el registro de sesión. Intenta nuevamente.");
+        }
+    }
+</script>
+    <button class="btn btn-outline-secondary" type="button" onclick="redirigir()">Registrarse</button>
+</div>
+      </form>
+      <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
