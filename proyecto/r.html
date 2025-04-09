@@ -55,27 +55,27 @@
     <form class="row g-3" action="../bs/registrado.sql" method="post">
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Correo Electronico:</label>
-          <input type="email" class="form-control" id="a" placeholder="Ingresa Tu Correo" required>
+          <input type="email" class="form-control" id="a" name="a" placeholder="Ingresa Tu Correo" required>
         </div>
         <div class="col-md-6">
           <label for="inputPassword4" class="form-label">Contraseña:</label>
-          <input type="password" class="form-control" id="b" placeholder="Ingresa Tu Contraseña" required>
+          <input type="password" class="form-control" id="b" name="b" placeholder="Ingresa Tu Contraseña" required>
         </div>
         <div class="col-12">
           <label for="inputAddress" class="form-label">Nombre Completo:</label>
-          <input type="text" class="form-control" id="c" placeholder="Empezando Por Apellidos" required>
+          <input type="text" class="form-control" id="c" name="c" placeholder="Empezando Por Apellidos" required>
         </div>
         <div class="col-12">
           <label for="inputAddress2" class="form-label">Numero De Control:</label>
-          <input type="text" class="form-control" id="d" placeholder="Ingresa Tu Numero De Control" required>
+          <input type="text" class="form-control" id="d" name="d" placeholder="Ingresa Tu Numero De Control" required>
         </div>
         <div class="col-md-6">
           <label for="inputCity" class="form-label">Grupo:</label>
-          <input type="text" class="form-control" id="f" placeholder="Ingresa Tu Grupo" required>
+          <input type="text" class="form-control" id="f" name="f" placeholder="Ingresa Tu Grupo" required>
         </div>
         <div class="col-md-4">
           <label for="inputState" class="form-label">Carrera:</label>
-          <select id="g" class="form-select" required>
+          <select id="g" name="g" class="form-select" required>
             <option selected></option>
   <option value="">Logistica</option>
   <option value="">Programacion</option>
@@ -86,7 +86,7 @@
         </div>
         <div class="col-md-2">
           <label for="inputZip" class="form-label">Nombre De Usuario</label>
-          <input type="text" class="form-control" id="h"  placeholder="Puedes Ingresar Algun Apodo, O Como Te Gusta Que Te digan" required>
+          <input type="text" class="form-control" id="h" name="h" placeholder="Puedes Ingresar Algun Apodo, O Como Te Gusta Que Te digan" required>
         </div>
                  <button class="btn btn-outline-secondary" type="submit" onclick="validarFormulario()">Enviar</button>
       </form>
