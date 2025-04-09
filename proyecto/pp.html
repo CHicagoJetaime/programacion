@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEtis 23</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(80, 80, 80);
+            text-align: center;
+        }
+        .a{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px; 
+            height: auto; 
+        }
+        .nashe{
+            width: 1000px; 
+            height: auto; 
+            margin: auto;
+        }
+        h5{
+            color: rgb(25, 24, 40);
+        }
+        p{
+            color: rgb(0, 4, 59);
+        }
+    </style>
+</head>
+<body>
+    <img src="../img/nashe.jpeg" alt="Descripción de la imagen" class="a">
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <button type="button" class="btn btn-outline-danger" onclick="registrarUsuario()">REGISTRATE</button>
+      <script>
+        function registrarUsuario() {
+            alert("Redirigiendo al formulario de registro...");
+            window.location.href = "../proyecto/r.html"; 
+        }
+    </script>
+      <button type="button" class="btn btn-outline-danger" onclick="iniciarSecion()">Inicia Secion</button>
+      <script>
+        function iniciarSecion() {
+            alert("Redirigiendo al formulario de inicio de secion...");
+            window.location.href = "../proyecto/is.html"; 
+        }
+    </script>
+    </div>
+    <h1><u><b><i>HOLA ESTUDIANTE!!!<br>
+      BIENVENIDO A LA PAGINA OFICIAL DEL CETIS 23!!!</i></b></u></h1><br><br><br>
 
+    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="nashe">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <a href="../proyecto/h.html">
+            <img src="../img/h.jpg" class="d-block w-100" alt="..." align="center">
+          </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Revisa Tus Horarios Aquí.</h5>
+              <p>¿Tienes duda de en que salon vas, a que hora, en que grupo?</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <a href="../proyecto/em.html">
+            <img src="../img/em.jpg" class="d-block w-100" alt="...">
+          </a>
+            <div class="carousel-caption d-none d-md-block" >
+              <h5>Evalua A Nuestro Personal Aquí.</h5>
+              <p>¿Quieres Darle Consejos Sobre Como Mejorar La Forma De Evaluar, O De Dar Clase A Tu Profesor?, ¿O Tienes Alguna duda Sobre El Personal Del Plantel?</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <a href="../proyecto/aa.html">
+            <img src="../img/aa.jpg" class="d-block w-100" alt="...">
+          </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Informacion Aquí.</h5>
+              <p>¿Quíeres Participar En Proyectos, Actividades Academicas, O En Torneos Deportivos?</p>
+            </div>
+          </div>
+
+        <div class="carousel-item">
+          <a href="../proyecto/vi.html">
+          <img src="../img/vi.jpg" class="d-block w-100" alt="...">
+          </a>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Informacion Aquí.</h5>
+            <p>¿Reprobaste alguna materia y quieres recuperarla?</p>
+          </div>
+        </div>
+    </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
