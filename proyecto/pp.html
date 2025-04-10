@@ -33,19 +33,27 @@
         p{
             color: rgb(0, 4, 59);
         }
+        .bn{
+              width: 100%; 
+            max-width: 900px; 
+            height: auto; 
+            display: block;
+            margin: 0 auto; 
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar bg-body-tertiary fixed-top">
+    <div class="bn">
+   <nav class="navbar navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Offcanvas navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#">Offcanvas dark navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -59,7 +67,7 @@
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu dropdown-menu-dark">
               <li><a class="dropdown-item" href="#">Action</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li>
@@ -71,12 +79,13 @@
         </ul>
         <form class="d-flex mt-3" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-success" type="submit">Search</button>
         </form>
       </div>
     </div>
   </div>
 </nav>
+        </div>
     <img src="../img/nashe.jpeg" alt="Descripción de la imagen" class="nashe">
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
       <button type="button" class="btn btn-outline-danger" onclick="registrarUsuario()">REGISTRATE</button>
@@ -96,7 +105,7 @@
     </div>
     <h1><u><b><i>HOLA ESTUDIANTE!!!<br>
       BIENVENIDO A LA PAGINA OFICIAL DEL CETIS 23!!!</i></b></u></h1><br><br><br>
-
+ <div class="bn">
     <div class="accordion accordion-flush" id="accordionFlushExample">
   <div class="accordion-item">
     <h2 class="accordion-header">
@@ -130,6 +139,7 @@
   </div>
 </div>
     <br><br><br>
+     <div class="bn">
     <div id="carouselExampleDark" class="carousel carousel-dark slide">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -166,7 +176,7 @@
               <p>¿Quíeres Participar En Proyectos, Actividades Academicas, O En Torneos Deportivos?</p>
             </div>
           </div>
-
+ </div>
         <div class="carousel-item">
           <a href="../proyecto/vi.html">
           <img src="../img/vi.jpg" class="d-block w-100" alt="...">
@@ -186,6 +196,7 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+           </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
