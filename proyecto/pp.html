@@ -61,6 +61,7 @@ color: white;
     </style>
 </head>
 <body>
+    <div class="bn">
    <nav class="navbar navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">"CEtis23" "Jose Viecente Villada"</a>
@@ -97,12 +98,30 @@ color: white;
         <form class="d-flex mt-3" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-success" type="submit">Search</button>
+            <div class="bn">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <button type="button" class="btn btn-outline-danger" onclick="registrarUsuario()">REGISTRATE</button>
+      <script>
+        function registrarUsuario() {
+            alert("Redirigiendo al formulario de registro...");
+            window.location.href = "../proyecto/r.html"; 
+        }
+    </script>
+      <button type="button" class="btn btn-outline-danger" onclick="iniciarSecion()">Inicia Secion</button>
+      <script>
+        function iniciarSecion() {
+            alert("Redirigiendo al formulario de inicio de secion...");
+            window.location.href = "../proyecto/is.html"; 
+        }
+    </script>
+    </div>
         </form>
       </div>
     </div>
   </div>
 </nav>
         </div>
+       </div>
     <img src="../img/nashe.jpeg" alt="Descripción de la imagen" class="nashe">
     
     <h1><u><b><i>HOLA ESTUDIANTE!!!<br>
