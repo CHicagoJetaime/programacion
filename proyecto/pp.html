@@ -6,6 +6,15 @@
     <title>CEtis 23</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        }
+        .offcanvas-header .toggle-text {
+            display: none; 
+            font-size: 18px;
+            font-weight: bold;
+            color: #FFD700;
+            margin-top: 10px;
+        }
+
         .navbar {
             background: transparent ; 
         }
@@ -86,12 +95,14 @@
 <body>
     <nav class="navbar fixed-top">
   <div class="container-fluid">
-  <a class="navbar-brand" href="#">"CEtis 23" <br> "Jose Vicente Villada"</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header" class="nashe">
+        <div class="nashe">
+      <div class="offcanvas-header">
+          </div>
+            <span class="toggle-text">"CEtis 23" <br> "Jose Vicente Villada"</span>
          <img src="../img/nashe.png" alt="Logo">
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
