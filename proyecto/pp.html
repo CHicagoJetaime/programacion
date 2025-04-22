@@ -93,73 +93,50 @@
     </style>
 </head>
 <body>
-    <nav class="navbar fixed-top">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="nashe">
-      <div class="offcanvas-header">
-          </div>
-            <span class="toggle-text">"CEtis 23" <br> "Jose Vicente Villada"</span>
-         <img src="../img/nashe.png" alt="Logo">
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-          <nav class="navbar fixed-top d-flex justify-content-between align-items-center">
-  <div>
-    <a class="navbar-brand" href="#">
-      <img src="tu-imagen.png" alt="Logo">
-    </a>
-  </div>
-  <div class="nav-buttons">
-    <button type="button" class="btn btn-outline-danger btn-custom" onclick="registrarUsuario()">REGÍSTRATE</button><br><br>
-    <button type="button" class="btn btn-outline-danger btn-custom" onclick="iniciarSecion()">Inicia Sesión</button>
-  </div>
-</nav>
-
-<script>
-  function registrarUsuario() {
-      alert("Redirigiendo al formulario de registro...");
-      window.location.href = "../proyecto/r.html"; 
-  }
-
-  function iniciarSecion() {
-      alert("Redirigiendo al formulario de inicio de sesión...");
-      window.location.href = "../proyecto/is.html"; 
-  }
-</script>
-
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Enlace</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Opciones
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Acción</a></li>
-              <li><a class="dropdown-item" href="#">Otra acción</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Algo más aquí</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="d-flex mt-3" role="search">
-          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </form>
+    <nav class="navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+           <img src="tu-imagen.png" alt="Logo" class="toggle-image"> 
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <img src="../img/nashe.png" alt="Logo"> 
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
     <h1><u><b><i>HOLA ESTUDIANTE!!!<br>
       BIENVENIDO A LA PAGINA OFICIAL DEL CETIS 23!!!</i></b></u></h1><br><br><br>
  <div class="bn">
