@@ -89,52 +89,36 @@
     </style>
 </head>
 <body>
-<nav class="navbar navbar-dark bg-transparent fixed-top">
+<nav class="navbar navbar-dark bg-transparent fixed-top" style="backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Offcanvas transparent navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#">Offcanvas blurred navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTransparentNavbar" aria-controls="offcanvasTransparentNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="offcanvas offcanvas-end bg-transparent text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel" style="background-color:  rgba(0, 0, 0, 0.5); border: none;">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasTransparentNavbar" aria-labelledby="offcanvasTransparentNavbarLabel" style="background-color: rgba(0, 0, 0, 0.8);">
       <div class="offcanvas-header">
-       <img src="../img/nashe.png" alt="..." style=" height: 200px; widht: auto; margin: auto; position: left;">
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button type="button" class="btn btn-outline-danger" onclick="registrarUsuario()">REGISTRATE</button><br><br>
-        <script>
-          function registrarUsuario() {
-              alert("Redirigiendo al formulario de registro...");
-              window.location.href = "../proyecto/r.html"; 
-          }
-      </script>
-        <button type="button" class="btn btn-outline-danger" onclick="iniciarSecion()">Inicia Secion</button>
-        <script>
-          function iniciarSecion() {
-              alert("Redirigiendo al formulario de inicio de secion...");
-              window.location.href = "../proyecto/is.html"; 
-          }
-      </script>
-      </div>
+        <h5 class="offcanvas-title" id="offcanvasTransparentNavbarLabel" style="color: #fff;">Transparent Offcanvas</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#" style="color: #fff;">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#" style="color: #fff;">Link</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #fff;">
               Dropdown
             </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+            <ul class="dropdown-menu" style="background-color: rgba(0, 0, 0, 0.8);">
+              <li><a class="dropdown-item" href="#" style="color: #fff;">Action</a></li>
+              <li><a class="dropdown-item" href="#" style="color: #fff;">Another action</a></li>
               <li>
-                <hr class="dropdown-divider">
+                <hr class="dropdown-divider" style="border-color: rgba(255, 255, 255, 0.2);">
               </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#" style="color: #fff;">Something else here</a></li>
             </ul>
           </li>
         </ul>
