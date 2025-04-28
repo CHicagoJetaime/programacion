@@ -9,9 +9,6 @@
     .offcanvas offcanvas-end bg-transparent text-bg-dark {
         background-color: rgba(0, 0, 0, 0.5);
     }
-            .navbar navbar-dark bg-transparent fixed-top{
-        backdrop-filter: blur(5px);
-        }
         footer {
             background: linear-gradient(45deg, #5B0E2D, #0E3B5B); /* Fondo vino y azul marino */
             color: white;
@@ -101,24 +98,9 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="offcanvas offcanvas-end bg-transparent text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
       <div class="offcanvas-header">
-        <img src="../img/nashe.png" alt="..." style=" height: 200px; widht: auto; margin: auto; position: left;">
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button type="button" class="btn btn-outline-danger" onclick="registrarUsuario()">REGISTRATE</button>
-        <script>
-          function registrarUsuario() {
-              alert("Redirigiendo al formulario de registro...");
-              window.location.href = "../proyecto/r.html"; 
-          }
-      </script>
-        <button type="button" class="btn btn-outline-danger" onclick="iniciarSecion()">Inicia Secion</button>
-        <script>
-          function iniciarSecion() {
-              alert("Redirigiendo al formulario de inicio de secion...");
-              window.location.href = "../proyecto/is.html"; 
-          }
-      </script>
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Transparent offcanvas</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
