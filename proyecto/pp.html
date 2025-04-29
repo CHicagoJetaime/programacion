@@ -89,35 +89,16 @@
     </style>
 </head>
 <body> 
-    <div class="a">
-<nav class="navbar navbar-dark bg-transparent fixed-top">
+  <nav class="navbar navbar-dark bg-transparent fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Offcanvas transparent navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#">Offcanvas navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-      </div>
-     <div class="b">
-    <div class="offcanvas offcanvas-end bg-transparent text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="background-color:  rgba(0, 0, 0, 0.5); border: none;">
       <div class="offcanvas-header">
-       <img src="../img/nashe.png" alt="..." style=" height: 200px; widht: auto; margin: auto; position: left;">
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button type="button" class="btn btn-outline-danger" onclick="registrarUsuario()">REGISTRATE</button><br><br>
-        <script>
-          function registrarUsuario() {
-              alert("Redirigiendo al formulario de registro...");
-              window.location.href = "../proyecto/r.html"; 
-          }
-      </script>
-        <button type="button" class="btn btn-outline-danger" onclick="iniciarSecion()">Inicia Secion</button>
-        <script>
-          function iniciarSecion() {
-              alert("Redirigiendo al formulario de inicio de secion...");
-              window.location.href = "../proyecto/is.html"; 
-          }
-      </script>
-      </div>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -131,7 +112,7 @@
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown
             </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
+            <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Action</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li>
@@ -143,12 +124,11 @@
         </ul>
         <form class="d-flex mt-3" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-success" type="submit">Search</button>
+          <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
     </div>
   </div>
-     </div>
 </nav>
     <h1><u><b><i>HOLA ESTUDIANTE!!!<br>
       BIENVENIDO A LA PAGINA OFICIAL DEL CETIS 23!!!</i></b></u></h1><br><br><br>
