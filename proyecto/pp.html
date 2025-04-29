@@ -97,7 +97,24 @@
     </button>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="background-color:  rgba(0, 0, 0, 0.5); border: none;">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+        <img src="../img/nashe.png" alt="..." style=" height: 200px; widht: auto; margin: auto; position: left;">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button type="button" class="btn btn-outline-danger" onclick="registrarUsuario()">REGISTRATE</button><br><br>
+        <script>
+          function registrarUsuario() {
+              alert("Redirigiendo al formulario de registro...");
+              window.location.href = "../proyecto/r.html"; 
+          }
+      </script>
+        <button type="button" class="btn btn-outline-danger" onclick="iniciarSecion()">Inicia Secion</button>
+        <script>
+          function iniciarSecion() {
+              alert("Redirigiendo al formulario de inicio de secion...");
+              window.location.href = "../proyecto/is.html"; 
+          }
+      </script>
+      </div>
+
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
