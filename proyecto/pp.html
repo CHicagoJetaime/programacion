@@ -6,44 +6,6 @@
     <title>CEtis 23</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .btn-close.custom-close {
-    background-color: #DC143C; /* Rojo carmesí */
-    border: none;
-    border-radius: 50%;
-    background-image: none; /* Quita la imagen por defecto */
-    width: 32px;
-    height: 32px;
-    position: relative;    
-    box-shadow: 0 0 5px rgba(220, 20, 60, 0.5); /* Efecto fosforescente inicial */
-    transition: box-shadow 0.3s ease-in-out, transform 0.1s ease;
-    cursor: pointer;
-  }
-
-  /* Crea el ícono de cierre en el centro */
-  .btn-close.custom-close::before {
-    content: "\00d7";  /* Símbolo '×' */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #FFF;
-    font-size: 16px;
-    font-weight: bold;
-  }
-
-  /* Efecto hover: aumenta el brillo y un sutil escalado */
-  .btn-close.custom-close:hover {
-    box-shadow: 0 0 10px rgba(220, 20, 60, 0.8);
-    transform: scale(1.05);
-  }
-
-  /* Efecto activo: incrementa la intensidad de la sombra para simular un brillo fosforescente */
-  .btn-close.custom-close:active {
-    box-shadow: 0 0 20px rgba(220, 20, 60, 1);
-    transform: scale(0.95);
-  }
-
-        }
         footer {
             background: linear-gradient(45deg, #5B0E2D, #0E3B5B); /* Fondo vino y azul marino */
             color: white;
