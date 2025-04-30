@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Evaluación de Maestros</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: sans-serif;
+      text-align: center;
+      background: #f5f5f5;
+      padding: 0 10px;
+    }
+    
+    h1 {
+      margin-bottom: 30px;
+    }
+    
+    input[type="radio"].hidden-radio {
+      display: none;
+    }
+
+    .question {
+      margin-bottom: 20px;
+      width: 90%;
+      max-width: 500px;
+    }
+    
+    .options {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 5px;
+    }
+   
+    .option-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    
+    .custom-radio-check {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border: 2px solid green;
+      border-radius: 4px;
+      margin-top: 5px;
+      position: relative;
+      text-align: center;
+      line-height: 30px;
+      transition: box-shadow 0.2s ease, transform 0.1s ease;
+    }
+   
+    input[type="radio"].hidden-radio.check:checked + .custom-radio-check::after {
+      content: "✓";
+      color: green;
+      font-size: 20px;
+      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+   
+    .custom-radio-check:active {
+      box-shadow: 0 0 20px green;
+      transform: scale(0.95);
+    }
+    
+   
+    .custom-radio-cross {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border: 2px solid #DC143C;
+      border-radius: 4px;
+      margin-top: 5px;
+      position: relative;
+      text-align: center;
+      line-height: 30px;
+      transition: box-shadow 0.2s ease, transform 0.1s ease;
+    }
+    
+    input[type="radio"].hidden-radio.cross:checked + .custom-radio-cross::after {
+      content: "×";
+      color: #DC143C;
+      font-size: 20px;
+      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .custom-radio-cross:active {
+      box-shadow: 0 0 20px #DC143C;
+      transform: scale(0.95);
+    }
+    
+   
+    button[type="submit"] {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Evaluación del Profesor</h1>
+  <form action="procesar_formulario.php" method="POST">
+    
+    
+    <div class="question">
+      <div><strong>1. ¿El profesor es claro en sus explicaciones?</strong></div>
+      <div class="options">
+        <label class="option-wrapper" for="q1Si">
+          Sí
+          <input type="radio" name="q1" id="q1Si" class="hidden-radio check">
+          <span class="custom-radio-check"></span>
+        </label>
+        <label class="option-wrapper" for="q1No">
+          No
+          <input type="radio" name="q1" id="q1No" class="hidden-radio cross">
+          <span class="custom-radio-cross"></span>
+        </label>
+      </div>
+    </div>
+    
+   
+    <div class="question">
+      <div><strong>2. ¿El profesor logra mantener el interés de la clase?</strong></div>
+      <div class="options">
+        <label class="option-wrapper" for="q2Si">
+          Sí
+          <input type="radio" name="q2" id="q2Si" class="hidden-radio check">
+          <span class="custom-radio-check"></span>
+        </label>
+        <label class="option-wrapper" for="q2No">
+          No
+          <input type="radio" name="q2" id="q2No" class="hidden-radio cross">
+          <span class="custom-radio-cross"></span>
+        </label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <div><strong>3. ¿El profesor utiliza métodos interactivos de enseñanza?</strong></div>
+      <div class="options">
+        <label class="option-wrapper" for="q3Si">
+          Sí
+          <input type="radio" name="q3" id="q3Si" class="hidden-radio check">
+          <span class="custom-radio-check"></span>
+        </label>
+        <label class="option-wrapper" for="q3No">
+          No
+          <input type="radio" name="q3" id="q3No" class="hidden-radio cross">
+          <span class="custom-radio-cross"></span>
+        </label>
+      </div>
+    </div>
+    
+   
+    <div class="question">
+      <div><strong>4. ¿El profesor es accesible para consultas y apoyo?</strong></div>
+      <div class="options">
+        <label class="option-wrapper" for="q4Si">
+          Sí
+          <input type="radio" name="q4" id="q4Si" class="hidden-radio check">
+          <span class="custom-radio-check"></span>
+        </label>
+        <label class="option-wrapper" for="q4No">
+          No
+          <input type="radio" name="q4" id="q4No" class="hidden-radio cross">
+          <span class="custom-radio-cross"></span>
+        </label>
+      </div>
+    </div>
+     <!-- Pregunta 5 -->
+    <div class="question">
+      <div><strong>5. ¿El profesor fomenta un ambiente de respeto y participación?</strong></div>
+      <div class="options">
+        <label class="option-wrapper" for="q5Si">
+          Sí
+          <input type="radio" name="q5" id="q5Si" class="hidden-radio check">
+          <span class="custom-radio-check"></span>
+        </label>
+        <label class="option-wrapper" for="q5No">
+          No
+          <input type="radio" name="q5" id="q5No" class="hidden-radio cross">
+          <span class="custom-radio-cross"></span>
+        </label>
+      </div>
+    </div>
+    
+   
+    <div style="margin-top: 20px;">
+      <button type="submit">Enviar Evaluación</button>
+    </div>
+    
+  </form>
+</body>
+</html>
