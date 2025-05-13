@@ -9,7 +9,8 @@ $f = ['f'];
 $g = ['g'];
 
 
-$ingresar = "INSERT into registrado values('$a', '$b', '$c', '$d', '$e', '$f', '$g')"; 
+$ingresar = "INSERT into https://php-myadmin.net/db_structure.php?db=if0_38704752_registrado
+ values('$a', '$b', '$c', '$d', '$e', '$f', '$g')"; 
 $query = mysqli_query($conectar, $ingresar); 
 
 if($query){
