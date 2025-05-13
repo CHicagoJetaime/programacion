@@ -8,7 +8,7 @@ $e = $_POST['e'];
 $f = $_POST['f'];
 $g = $_POST['g'];
 
-$ingresar = "INSERT into registrado values('$a', '$b', '$c', '$d', '$e', '$f', '$g')"; 
+$ingresar = "INSERT into if0_38704752_registrado values('$a', '$b', '$c', '$d', '$e', '$f', '$g')"; 
 $query = mysqli_query($conectar, $ingresar); 
 
 if($query){
