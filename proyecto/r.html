@@ -4,36 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina De Registro</title>
-    <script>
-        function validarFormulario() {
-            // Obtener los valores del formulario
-            const a = document.getElementById('a').value;
-            const b = document.getElementById('b').value;
-            const c = document.getElementById('c').value;
-            const d = document.getElementById('d').value;
-            const e = document.getElementById('e').value;
-            const f = document.getElementById('f').value;
-            const g = document.getElementById('g').value;
-            // Validar que los campos no estén vacíos
-            if (a === "" || b === "" || c === "" || d === "" || e === "" || f === "" || g === "") {
-                alert("Por favor, completa todos los campos del formulario.");
-                return false; // No se redirige si el formulario no está completo
-            }
-
-            // Guardar los datos en LocalStorage
-            localStorage.setItem('a', a);
-            localStorage.setItem('b', b);
-            localStorage.setItem('c', c);
-            localStorage.setItem('d', d);
-            localStorage.setItem('e', e);
-            localStorage.setItem('f', f);
-            localStorage.setItem('g', g);
-
-            // Redirigir a la nueva página
-            window.location.href = "../proyecto/pp.html";
-            return true;
-        }
-    </script>
     <style>
     body {
         background-image: url('../img/nashe.jpeg');
