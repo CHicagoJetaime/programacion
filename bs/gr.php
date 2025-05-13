@@ -8,17 +8,19 @@ $e = $_POST['e'];
 $f = $_POST['f'];
 $g = $_POST['g'];
 
-$sql = "INSERT registrado values('$a', '$b', '$c', '$d', '$e', '$f', '$g')"; 
+$ingresar = "INSERT into registrado values('$a', '$b', '$c', '$d', '$e', '$f', '$g')"; 
+$query = mysqli_query($conectar, $ingresar); 
 
-if ($conn->query($sql) === TRUE) {
-    echo "Registro guardado exitosamente.";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
-// Cerrar conexión
-$conn->close();
-
+if($query){
+    echo "<script> alert('Ingresado Correctamente!!');
+        location.href = '../proyecto/r.html';
+        </script>";
+        }
+        else{
+            echo "<script> alert('Error!!');
+            location.href = '../proyecto/r.html';
+            </script>";
+        }   
         ?>
 
 
