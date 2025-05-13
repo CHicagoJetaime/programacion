@@ -3,15 +3,14 @@ include '../Bs/conexion.php';
 $a = $_POST['a'];
 $b = $_POST['b'];
 $c = $_POST['c'];
-$d = ['d'];
-$e = ['e'];
-$f = ['f'];
-$g = ['g'];
+$d = $_POST['d'];
+$e = $_POST['e'];
+$f = $_POST['f'];
+$g = $_POST['g'];
 
 
-$ingresar = "INSERT into https://php-myadmin.net/db_structure.php?db=if0_38704752_registrado
- values('$a', '$b', '$c', '$d', '$e', '$f', '$g')"; 
-$query = mysqli_query($conectar, $ingresar); 
+$sql = "INSERT registrado values('$a', '$b', '$c', '$d', '$e', '$f', '$g')"; 
+
 
 if($query){
     echo "<script> alert('Ingresado Correctamente!!');
@@ -22,8 +21,9 @@ if($query){
             echo "<script> alert('Error!!');
             location.href = '../https://chicagojetaime.github.io/programacion/proyecto/r.html';
             </script>";
-        }   
+        } 
         ?>
+
 
 
 
