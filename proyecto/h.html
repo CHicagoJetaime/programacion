@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horarios</title>
     <style>
+           @media (max-width: auto) {
+      footer.diagonal-footer h6 {
+        font-size: 16px;
+      }
+      footer.diagonal-footer p, 
+      footer.diagonal-footer a {
+        font-size: 14px;
+      }
+    }
+       footer.diagonal-footer {
+      background: linear-gradient(90deg, #722F37, #001F3F);
+      color: #FFD700;
+      text-shadow: 0 0 8px #FFD700;
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 40px;
+      clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    }
+    footer.diagonal-footer a {
+      text-decoration: none;
+      color: inherit; 
+    }
+    footer.diagonal-footer a:hover {
+      text-decoration: underline;
+    }
+    footer.diagonal-footer hr {
+      border-top: 1px solid #FFD700;
+    }
         .nav-link, .offcanvas-title, .dropdown-item {
   color: #C0C0C0 !important;
   text-shadow: 0px 0px 5px #C0C0C0; 
