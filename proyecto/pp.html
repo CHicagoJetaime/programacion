@@ -14,7 +14,7 @@
             background: linear-gradient(90deg, #722F37, #001F3F);
             color: #FFD700;
             text-shadow: 0 0 8px #FFD700;
-            width: 100%; /* <--- Corregido aquí */
+            width: 100%;
             left: 0;
             position: relative;
             padding-top: 50px;
@@ -110,8 +110,163 @@
     </style>
 </head>
 <body> 
-  <!-- ...Tu código html del nav, acordeón y carousel permanece igual... -->
-  
+  <nav class="navbar navbar-dark bg-transparent fixed-top" style="text-align: center;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="background-color:  rgba(0, 0, 0, 0.5); border: none;">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>              
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">"CEtis 23" <br> "Jose Vicente Villada"</h5> 
+          <img src="../img/nashe.png" alt="..." style=" height: 300px; width: auto; margin: auto; display: block;">
+          <button type="button" class="btn btn-outline-danger" onclick="registrarUsuario()">REGISTRATE</button>
+          <script>
+            function registrarUsuario() {
+              alert("Redirigiendo al formulario de registro...");
+              window.location.href = "https://bs.kesug.com/index.html"; 
+            }
+          </script>
+          <button type="button" class="btn btn-outline-danger" onclick="iniciarSecion()">Inicia Secion</button>
+          <script>
+            function iniciarSecion() {
+              alert("Redirigiendo al formulario de inicio de secion...");
+              window.location.href = "https://bs.kesug.com/is.html"; 
+            }
+          </script>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" style="background-color:  rgba(0, 0, 0, 0.5);">
+                <li><a class="dropdown-item" href="https://bs.kesug.com/lista/lista.php">LISTA</a></li>
+                <li><a class="dropdown-item" href="../proyecto/m.html">MODAL</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="">nashe</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <h1><u><b><i>HOLA ESTUDIANTE!!!<br>
+    BIENVENIDO A LA PAGINA OFICIAL DEL CETIS 23!!!</i></b></u></h1><br><br><br>
+  <div class="accordion" id="accordionPanelsStayOpenExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+          Accordion Item #1
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+        <div class="accordion-body">
+          <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+          Accordion Item #2
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+          Accordion Item #3
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  <div class="bn">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <a href="../proyecto/h.html">
+            <img src="../img/h.jpg" class="d-block w-100" alt="...">
+          </a>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Revisa Tus Horarios Aquí.</h5>
+            <p>¿Tienes duda de en que salon vas, a que hora, en que grupo?</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <a href="../proyecto/em.html">
+            <img src="../img/em.jpg" class="d-block w-100" alt="...">
+          </a>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Evalua A Nuestro Personal Aquí.</h5>
+            <p>¿Quieres Darle Consejos Sobre Como Mejorar La Forma De Evaluar, O De Dar Clase A Tu Profesor?, ¿O Tienes Alguna duda Sobre El Personal Del Plantel?</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a href="../proyecto/aa.html">
+            <img src="../img/aa.jpg" class="d-block w-100" alt="...">
+          </a>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Informacion Aquí.</h5>
+            <p>¿Quíeres Participar En Proyectos, Actividades Academicas, O En Torneos Deportivos?</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a href="../proyecto/vi.html">
+            <img src="../img/vi.jpg" class="d-block w-100" alt="...">
+          </a>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Informacion Aquí.</h5>
+            <p>¿Reprobaste alguna materia y quieres recuperarla?</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <br><br><br>
+  </div>
   <footer class="diagonal-footer">
     <div class="footer-container container text-center text-md-start">
       <div class="row text-center text-md-start">
