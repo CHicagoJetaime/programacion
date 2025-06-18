@@ -50,22 +50,32 @@
             color: #FFFFFF !important; 
             text-shadow: 0px 0px 10px #FFFFFF; 
         }
+        /* Estilo para botones chicos del menú */
+        .menu-btn-sm {
+            font-size: 0.85rem;
+            padding: 3px 10px;
+            border-radius: 18px;
+        }
         /* Acordeón */
         .accordion-button {
             background: linear-gradient(45deg, #5B0E2D, #0E3B5B);
-            color: #DAA520;
-            transition: color 0.6s, font-weight 0.6s;
+            color: #FFD700; /* Dorado brillante */
+            text-shadow: 0 0 7px #FFF700, 0 0 15px #FFD700;
+            transition: color 0.6s, font-weight 0.6s, text-shadow 0.4s;
             border: none;
         }
         .accordion-button:not(.collapsed) {
-            color: #FFD700; 
+            color: #FFF700;
+            text-shadow: 0 0 15px #FFF700, 0 0 28px #FFD700, 0 0 40px #FFF700;
             font-weight: bold;
         }
         .accordion-button:focus {
             box-shadow: none;
         }
         .accordion-button:hover {
-            opacity: 0.8;
+            color: #FFF700;
+            text-shadow: 0 0 20px #FFD700, 0 0 40px #FFF700;
+            opacity: 1;
         }
         .accordion-body {
             background: linear-gradient(45deg, #5B0E2D, #0E3B5B);
@@ -141,8 +151,8 @@
           <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">CEtis 23 <br> "Jose Vicente Villada"</h5>
           <img src="../img/nashe.png" alt="Logo" class="nashe">
           <div class="offcanvas-btn-group">
-            <button type="button" class="btn btn-outline-danger" onclick="registrarUsuario()">REGISTRATE</button>
-            <button type="button" class="btn btn-outline-danger" onclick="iniciarSecion()">Inicia Sesión</button>
+            <button type="button" class="btn btn-outline-danger menu-btn-sm" onclick="registrarUsuario()">REGISTRATE</button>
+            <button type="button" class="btn btn-outline-danger menu-btn-sm" onclick="iniciarSecion()">Inicia Sesión</button>
           </div>
           <script>
             function registrarUsuario() {
@@ -178,7 +188,7 @@
     BIENVENIDO A LA PAGINA OFICIAL DEL CETIS 23!!!</i></b></u></h1>
   <br><br>
 
-  <!-- ACORDEÓN (auto-cambia cada 2s) -->
+  <!-- ACORDEÓN (auto-cambia cada 3s) -->
   <div class="accordion" id="accordionExample">
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingOne">
@@ -241,7 +251,7 @@
         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="2000">
+        <div class="carousel-item active" data-bs-interval="3000">
           <a href="../proyecto/h.html">
             <img src="../img/h.jpg" class="d-block w-100" alt="Horarios">
           </a>
@@ -250,7 +260,7 @@
             <p>¿Tienes duda de en qué salón vas, a qué hora, en qué grupo?</p>
           </div>
         </div>
-        <div class="carousel-item" data-bs-interval="2000">
+        <div class="carousel-item" data-bs-interval="3000">
           <a href="../proyecto/em.html">
             <img src="../img/em.jpg" class="d-block w-100" alt="Evalua personal">
           </a>
@@ -259,7 +269,7 @@
             <p>¿Quieres dar consejos sobre cómo mejorar la forma de evaluar, o tienes dudas sobre el personal del plantel?</p>
           </div>
         </div>
-        <div class="carousel-item" data-bs-interval="2000">
+        <div class="carousel-item" data-bs-interval="3000">
           <a href="../proyecto/aa.html">
             <img src="../img/aa.jpg" class="d-block w-100" alt="Información">
           </a>
@@ -268,7 +278,7 @@
             <p>¿Quieres participar en proyectos, actividades académicas o en torneos deportivos?</p>
           </div>
         </div>
-        <div class="carousel-item" data-bs-interval="2000">
+        <div class="carousel-item" data-bs-interval="3000">
           <a href="../proyecto/vi.html">
             <img src="../img/vi.jpg" class="d-block w-100" alt="Recupera materias">
           </a>
@@ -377,7 +387,7 @@
       current = (current + 1) % panels.length;
     }
 
-    setInterval(nextAccordion, 2000);
+    setInterval(nextAccordion, 3000);
   </script>
 </body>
 </html>
