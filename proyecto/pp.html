@@ -54,7 +54,9 @@
         .menu-btn-sm {
             font-size: 0.85rem;
             padding: 3px 10px;
-            border-radius: 18px;
+            border-radius: 6px; /* poco redondeado */
+            width: auto;
+            min-width: 90px;
         }
         /* Acordeón */
         .accordion-button {
@@ -151,19 +153,9 @@
           <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">CEtis 23 <br> "Jose Vicente Villada"</h5>
           <img src="../img/nashe.png" alt="Logo" class="nashe">
           <div class="offcanvas-btn-group">
-            <button type="button" class="btn btn-outline-danger menu-btn-sm" onclick="registrarUsuario()">REGISTRATE</button>
-            <button type="button" class="btn btn-outline-danger menu-btn-sm" onclick="iniciarSecion()">Inicia Sesión</button>
+            <a href="https://bs.kesug.com/index.html" class="btn btn-outline-danger menu-btn-sm" style="width:auto;">REGISTRATE</a>
+            <a href="https://bs.kesug.com/is.html" class="btn btn-outline-danger menu-btn-sm" style="width:auto;">Inicia Sesión</a>
           </div>
-          <script>
-            function registrarUsuario() {
-              alert("Redirigiendo al formulario de registro...");
-              window.location.href = "https://bs.kesug.com/index.html";
-            }
-            function iniciarSecion() {
-              alert("Redirigiendo al formulario de inicio de sesión...");
-              window.location.href = "https://bs.kesug.com/is.html";
-            }
-          </script>
         </div>
         <div class="offcanvas-body pt-0">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
