@@ -41,15 +41,15 @@
             display: block;
             margin: 0 auto; 
         }
-        /* --- Se removieron los estilos personalizados del menú --- */
-        /* .nav-link, .offcanvas-title, .dropdown-item {
+        /* --- Estilos personalizados del menú reactivados --- */
+        .nav-link, .offcanvas-title, .dropdown-item {
             color: #C0C0C0 !important;
             text-shadow: 0px 0px 5px #C0C0C0; 
         }
         .nav-link:hover, .dropdown-item:hover {
             color: #FFFFFF !important; 
             text-shadow: 0px 0px 10px #FFFFFF; 
-        } */
+        }
         /* Acordeón */
         .accordion-button {
             background: linear-gradient(45deg, #5B0E2D, #0E3B5B);
@@ -73,6 +73,10 @@
         }
         .accordion-item {
             border: none;
+        }
+        /* Acelera transición del acordeón */
+        .accordion-collapse {
+            transition-duration: 0.2s !important;
         }
         /* Footer */
         footer.diagonal-footer {
@@ -241,7 +245,7 @@
         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="4000">
+        <div class="carousel-item active" data-bs-interval="2000">
           <a href="../proyecto/h.html">
             <img src="../img/h.jpg" class="d-block w-100" alt="Horarios">
           </a>
@@ -250,7 +254,7 @@
             <p>¿Tienes duda de en qué salón vas, a qué hora, en qué grupo?</p>
           </div>
         </div>
-        <div class="carousel-item" data-bs-interval="4000">
+        <div class="carousel-item" data-bs-interval="2000">
           <a href="../proyecto/em.html">
             <img src="../img/em.jpg" class="d-block w-100" alt="Evalua personal">
           </a>
@@ -259,7 +263,7 @@
             <p>¿Quieres dar consejos sobre cómo mejorar la forma de evaluar, o tienes dudas sobre el personal del plantel?</p>
           </div>
         </div>
-        <div class="carousel-item" data-bs-interval="4000">
+        <div class="carousel-item" data-bs-interval="2000">
           <a href="../proyecto/aa.html">
             <img src="../img/aa.jpg" class="d-block w-100" alt="Información">
           </a>
@@ -268,7 +272,7 @@
             <p>¿Quieres participar en proyectos, actividades académicas o en torneos deportivos?</p>
           </div>
         </div>
-        <div class="carousel-item" data-bs-interval="4000">
+        <div class="carousel-item" data-bs-interval="2000">
           <a href="../proyecto/vi.html">
             <img src="../img/vi.jpg" class="d-block w-100" alt="Recupera materias">
           </a>
