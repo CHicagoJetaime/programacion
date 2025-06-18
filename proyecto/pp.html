@@ -36,10 +36,10 @@
         }
         .nashe{
             width: 100%; 
-            max-width: 220px; /* LOGO MÁS GRANDE */
+            max-width: 220px;
             height: auto; 
             display: block;
-            margin: 0 auto 25px auto; 
+            margin: 0 auto 10px auto; /* Menor espacio debajo del logo */
         }
         /* --- Estilos personalizados del menú --- */
         .nav-link, .offcanvas-title, .dropdown-item {
@@ -75,7 +75,7 @@
             border: none;
         }
         .accordion-collapse {
-            transition-duration: 0.5s !important; /* 0.5 segundos de animación */
+            transition-duration: 0.5s !important;
         }
         /* Footer */
         footer.diagonal-footer {
@@ -116,6 +116,12 @@
             margin: 0;
             padding: 0;
         }
+        /* Espaciado entre botones y menú en offcanvas */
+        .offcanvas-btn-group {
+            display: grid;
+            gap: 6px;
+            margin-bottom: 8px;
+        }
     </style>
 </head>
 <body>
@@ -134,8 +140,10 @@
         <div class="offcanvas-body text-center">
           <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">CEtis 23 <br> "Jose Vicente Villada"</h5>
           <img src="../img/nashe.png" alt="Logo" class="nashe">
-          <button type="button" class="btn btn-outline-danger" onclick="registrarUsuario()">REGISTRATE</button>
-          <button type="button" class="btn btn-outline-danger" onclick="iniciarSecion()">Inicia Sesión</button>
+          <div class="offcanvas-btn-group">
+            <button type="button" class="btn btn-outline-danger" onclick="registrarUsuario()">REGISTRATE</button>
+            <button type="button" class="btn btn-outline-danger" onclick="iniciarSecion()">Inicia Sesión</button>
+          </div>
           <script>
             function registrarUsuario() {
               alert("Redirigiendo al formulario de registro...");
@@ -147,7 +155,7 @@
             }
           </script>
         </div>
-        <div class="offcanvas-body">
+        <div class="offcanvas-body pt-0">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
               <a class="nav-link" href="https://bs.kesug.com/lista/lista.php">Lista</a>
@@ -170,7 +178,7 @@
     BIENVENIDO A LA PAGINA OFICIAL DEL CETIS 23!!!</i></b></u></h1>
   <br><br>
 
-  <!-- ACORDEÓN (auto-cambia cada 0.5s) -->
+  <!-- ACORDEÓN (auto-cambia cada 2s) -->
   <div class="accordion" id="accordionExample">
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingOne">
@@ -355,21 +363,21 @@
     let current = 0;
 
     function nextAccordion() {
-      // Cierra todos
-      panels.forEach((id, idx) => {
-        let el = document.getElementById(id);
-        let bsCollapse = bootstrap.Collapse.getOrCreateInstance(el, {toggle: false});
-        bsCollapse.hide();
-      });
+      // Cierra el panel anterior
+      let prev = (current === 0) ? panels.length - 1 : current - 1;
+      let elPrev = document.getElementById(panels[prev]);
+      let bsCollapsePrev = bootstrap.Collapse.getOrCreateInstance(elPrev, {toggle: false});
+      bsCollapsePrev.hide();
+
       // Abre el actual
-      let el = document.getElementById(panels[current]);
-      let bsCollapse = bootstrap.Collapse.getOrCreateInstance(el, {toggle: false});
-      bsCollapse.show();
+      let elCurrent = document.getElementById(panels[current]);
+      let bsCollapseCurrent = bootstrap.Collapse.getOrCreateInstance(elCurrent, {toggle: false});
+      bsCollapseCurrent.show();
 
       current = (current + 1) % panels.length;
     }
 
-    setInterval(nextAccordion, 500);
+    setInterval(nextAccordion, 2000);
   </script>
 </body>
 </html>
