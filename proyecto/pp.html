@@ -36,12 +36,12 @@
         }
         .nashe{
             width: 100%; 
-            max-width: 150px; 
+            max-width: 220px; /* LOGO MÁS GRANDE */
             height: auto; 
             display: block;
-            margin: 0 auto; 
+            margin: 0 auto 25px auto; 
         }
-        /* --- Estilos personalizados del menú reactivados --- */
+        /* --- Estilos personalizados del menú --- */
         .nav-link, .offcanvas-title, .dropdown-item {
             color: #C0C0C0 !important;
             text-shadow: 0px 0px 5px #C0C0C0; 
@@ -74,9 +74,8 @@
         .accordion-item {
             border: none;
         }
-        /* Acelera transición del acordeón */
         .accordion-collapse {
-            transition-duration: 0.2s !important;
+            transition-duration: 0.5s !important; /* 0.5 segundos de animación */
         }
         /* Footer */
         footer.diagonal-footer {
@@ -119,7 +118,7 @@
         }
     </style>
 </head>
-<body> 
+<body>
   <!-- NAVBAR -->
   <nav class="navbar navbar-dark bg-transparent fixed-top" style="text-align: center;">
     <div class="container-fluid">
@@ -129,43 +128,32 @@
       </button>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="background-color:  rgba(0, 0, 0, 0.5); border: none;">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>              
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">CEtis 23 <br> "Jose Vicente Villada"</h5> 
+        <div class="offcanvas-body text-center">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">CEtis 23 <br> "Jose Vicente Villada"</h5>
           <img src="../img/nashe.png" alt="Logo" class="nashe">
           <button type="button" class="btn btn-outline-danger" onclick="registrarUsuario()">REGISTRATE</button>
           <button type="button" class="btn btn-outline-danger" onclick="iniciarSecion()">Inicia Sesión</button>
           <script>
             function registrarUsuario() {
               alert("Redirigiendo al formulario de registro...");
-              window.location.href = "https://bs.kesug.com/index.html"; 
+              window.location.href = "https://bs.kesug.com/index.html";
             }
             function iniciarSecion() {
               alert("Redirigiendo al formulario de inicio de sesión...");
-              window.location.href = "https://bs.kesug.com/is.html"; 
+              window.location.href = "https://bs.kesug.com/is.html";
             }
           </script>
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="https://bs.kesug.com/lista/lista.php">Lista</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" style="background-color:  rgba(0, 0, 0, 0.5);">
-                <li><a class="dropdown-item" href="https://bs.kesug.com/lista/lista.php">LISTA</a></li>
-                <li><a class="dropdown-item" href="../proyecto/m.html">MODAL</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">nashe</a></li>
-              </ul>
+              <a class="nav-link" href="../proyecto/m.html">Modal</a>
             </li>
           </ul>
           <form class="d-flex mt-3" role="search">
@@ -182,7 +170,7 @@
     BIENVENIDO A LA PAGINA OFICIAL DEL CETIS 23!!!</i></b></u></h1>
   <br><br>
 
-  <!-- ACORDEÓN (solo uno a la vez) -->
+  <!-- ACORDEÓN (auto-cambia cada 0.5s) -->
   <div class="accordion" id="accordionExample">
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingOne">
@@ -360,5 +348,28 @@
   </footer>
   <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script para el acordeón automático -->
+  <script>
+    // IDs de los paneles
+    const panels = ['collapseOne', 'collapseTwo', 'collapseThree'];
+    let current = 0;
+
+    function nextAccordion() {
+      // Cierra todos
+      panels.forEach((id, idx) => {
+        let el = document.getElementById(id);
+        let bsCollapse = bootstrap.Collapse.getOrCreateInstance(el, {toggle: false});
+        bsCollapse.hide();
+      });
+      // Abre el actual
+      let el = document.getElementById(panels[current]);
+      let bsCollapse = bootstrap.Collapse.getOrCreateInstance(el, {toggle: false});
+      bsCollapse.show();
+
+      current = (current + 1) % panels.length;
+    }
+
+    setInterval(nextAccordion, 500);
+  </script>
 </body>
 </html>
