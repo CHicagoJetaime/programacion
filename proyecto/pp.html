@@ -1,15 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CEtis 23</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
         html, body {
             max-width: 100%;
             overflow-x: hidden;
         }
+        body {
+            background-image: url('../img/f.png');
+            background-size: cover; 
+            background-repeat: no-repeat;
+            background-position: center; 
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            color: #FFFFFF !important; 
+            text-shadow: 0px 0px 10px #FFFFFF; 
+        }
+        p{
+            color: rgb(0, 4, 59);
+        }
+        .bn{
+            width: 100%; 
+            max-width: 900px; 
+            height: auto; 
+            display: block;
+            margin: 0 auto; 
+        }
+        .nashe{
+            width: 100%; 
+            max-width: 150px; 
+            height: auto; 
+            display: block;
+            margin: 0 auto; 
+        }
+        /* Navbar y offcanvas */
+        .nav-link, .offcanvas-title, .dropdown-item {
+            color: #C0C0C0 !important;
+            text-shadow: 0px 0px 5px #C0C0C0; 
+        }
+        .nav-link:hover, .dropdown-item:hover {
+            color: #FFFFFF !important; 
+            text-shadow: 0px 0px 10px #FFFFFF; 
+        }
+        /* Acordeón */
+        .accordion-button {
+            background: linear-gradient(45deg, #5B0E2D, #0E3B5B);
+            color: #DAA520;
+            transition: color 0.6s, font-weight 0.6s;
+            border: none;
+        }
+        .accordion-button:not(.collapsed) {
+            color: #FFD700; 
+            font-weight: bold;
+        }
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+        .accordion-button:hover {
+            opacity: 0.8;
+        }
+        .accordion-body {
+            background: linear-gradient(45deg, #5B0E2D, #0E3B5B);
+            color: #C0C0C0;
+        }
+        .accordion-item {
+            border: none;
+        }
+        /* Footer */
         footer.diagonal-footer {
             background: linear-gradient(90deg, #722F37, #001F3F);
             color: #FFD700;
@@ -43,73 +108,15 @@
         footer.diagonal-footer hr {
             border-top: 1px solid #FFD700;
         }
-        .nav-link, .offcanvas-title, .dropdown-item {
-            color: #C0C0C0 !important;
-            text-shadow: 0px 0px 5px #C0C0C0; 
-        }
-        .nav-link:hover, .dropdown-item:hover {
-            color: #FFFFFF !important; 
-            text-shadow: 0px 0px 10px #FFFFFF; 
-        }
-        .accordion-button {
-            background: linear-gradient(45deg, #5B0E2D, #0E3B5B);
-            color: #DAA520;
-            transition: color 0.6s ease-in-out, font-weight 0.6s ease-in-out;
-            border: none;
-        }
-        .accordion-button:not(.collapsed) {
-            color: #FFD700; 
-            font-weight: bold;
-        }
-        .accordion-button:focus {
-            box-shadow: none;
-        }
-        .accordion-button:hover {
-            opacity: 0.8;
-        }
-        .accordion-body {
-            background: linear-gradient(45deg, #5B0E2D, #0E3B5B);
-            color: #C0C0C0;
-        }
-        .accordion-item {
-            border: none;
-        }
         footer {
             width: 100%;
             margin: 0;
             padding: 0;
         }
-        body {
-            background-image: url('../img/f.png');
-            background-size: cover; 
-            background-repeat: no-repeat;
-            background-position: center; 
-        }
-        .nashe{
-            float: left;
-            width: 100%; 
-            max-width: 150px; 
-            height: auto; 
-            display: block;
-            margin: 0 auto; 
-        }
-        h1{
-            color: #FFFFFF !important; 
-            text-shadow: 0px 0px 10px #FFFFFF; 
-        }
-        p{
-            color: rgb(0, 4, 59);
-        }
-        .bn{
-            width: 100%; 
-            max-width: 900px; 
-            height: auto; 
-            display: block;
-            margin: 0 auto; 
-        }
     </style>
 </head>
 <body> 
+  <!-- NAVBAR -->
   <nav class="navbar navbar-dark bg-transparent fixed-top" style="text-align: center;">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"></a>
@@ -122,19 +129,17 @@
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">"CEtis 23" <br> "Jose Vicente Villada"</h5> 
-          <img src="../img/nashe.png" alt="..." style=" height: 300px; width: auto; margin: auto; display: block;">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">CEtis 23 <br> "Jose Vicente Villada"</h5> 
+          <img src="../img/nashe.png" alt="Logo" class="nashe">
           <button type="button" class="btn btn-outline-danger" onclick="registrarUsuario()">REGISTRATE</button>
+          <button type="button" class="btn btn-outline-danger" onclick="iniciarSecion()">Inicia Sesión</button>
           <script>
             function registrarUsuario() {
               alert("Redirigiendo al formulario de registro...");
               window.location.href = "https://bs.kesug.com/index.html"; 
             }
-          </script>
-          <button type="button" class="btn btn-outline-danger" onclick="iniciarSecion()">Inicia Secion</button>
-          <script>
             function iniciarSecion() {
-              alert("Redirigiendo al formulario de inicio de secion...");
+              alert("Redirigiendo al formulario de inicio de sesión...");
               window.location.href = "https://bs.kesug.com/is.html"; 
             }
           </script>
@@ -154,10 +159,8 @@
               <ul class="dropdown-menu" style="background-color:  rgba(0, 0, 0, 0.5);">
                 <li><a class="dropdown-item" href="https://bs.kesug.com/lista/lista.php">LISTA</a></li>
                 <li><a class="dropdown-item" href="../proyecto/m.html">MODAL</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="">nashe</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">nashe</a></li>
               </ul>
             </li>
           </ul>
@@ -169,47 +172,66 @@
       </div>
     </div>
   </nav>
-  <h1><u><b><i>HOLA ESTUDIANTE!!!<br>
-    BIENVENIDO A LA PAGINA OFICIAL DEL CETIS 23!!!</i></b></u></h1><br><br><br>
+
+  <!-- TITULO -->
+  <h1 class="text-center mt-5 pt-5"><u><b><i>HOLA ESTUDIANTE!!!<br>
+    BIENVENIDO A LA PAGINA OFICIAL DEL CETIS 23!!!</i></b></u></h1>
+  <br><br>
+
+  <!-- ACORDEÓN -->
   <div class="accordion" id="accordionPanelsStayOpenExample">
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-          Accordion Item #1
+          Información Académica
         </button>
       </h2>
       <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
         <div class="accordion-body">
-          <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.
+          <ul>
+            <li><strong>Horarios de clases:</strong> Consulta los horarios actualizados de cada grupo y salón.</li>
+            <li><strong>Calendario escolar:</strong> Revisa las fechas importantes del ciclo escolar.</li>
+            <li><strong>Materias y descripciones:</strong> Información sobre las asignaturas y sus contenidos.</li>
+          </ul>
         </div>
       </div>
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-          Accordion Item #2
+          Servicios al Estudiante
         </button>
       </h2>
       <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
         <div class="accordion-body">
-          <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.
+          <ul>
+            <li><strong>Trámites escolares:</strong> Inscripciones, constancias y otros servicios administrativos.</li>
+            <li><strong>Becas y apoyos:</strong> Información sobre becas disponibles y requisitos.</li>
+            <li><strong>Actividades extracurriculares:</strong> Talleres, deportes y clubes estudiantiles.</li>
+          </ul>
         </div>
       </div>
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-          Accordion Item #3
+          Preguntas Frecuentes (FAQ)
         </button>
       </h2>
       <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
         <div class="accordion-body">
-          <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.
+          <ul>
+            <li><strong>¿Cómo recupero mi contraseña?</strong> Solicítala en el área de control escolar o en el portal digital.</li>
+            <li><strong>¿Dónde consulto mis calificaciones?</strong> Accede al sistema en línea con tu matrícula y contraseña.</li>
+            <li><strong>¿A quién acudo si tengo dudas administrativas?</strong> Dirígete a la oficina de servicios escolares o usa el formulario de contacto.</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
-  <br><br><br>
+
+  <br><br>
+  <!-- CAROUSEL -->
   <div class="bn">
     <div id="carouselExampleDark" class="carousel carousel-dark slide">
       <div class="carousel-indicators">
@@ -221,52 +243,54 @@
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="10000">
           <a href="../proyecto/h.html">
-            <img src="../img/h.jpg" class="d-block w-100" alt="...">
+            <img src="../img/h.jpg" class="d-block w-100" alt="Horarios">
           </a>
           <div class="carousel-caption d-none d-md-block">
             <h5>Revisa Tus Horarios Aquí.</h5>
-            <p>¿Tienes duda de en que salon vas, a que hora, en que grupo?</p>
+            <p>¿Tienes duda de en qué salón vas, a qué hora, en qué grupo?</p>
           </div>
         </div>
         <div class="carousel-item" data-bs-interval="2000">
           <a href="../proyecto/em.html">
-            <img src="../img/em.jpg" class="d-block w-100" alt="...">
+            <img src="../img/em.jpg" class="d-block w-100" alt="Evalua personal">
           </a>
           <div class="carousel-caption d-none d-md-block">
-            <h5>Evalua A Nuestro Personal Aquí.</h5>
-            <p>¿Quieres Darle Consejos Sobre Como Mejorar La Forma De Evaluar, O De Dar Clase A Tu Profesor?, ¿O Tienes Alguna duda Sobre El Personal Del Plantel?</p>
+            <h5>Evalúa A Nuestro Personal Aquí.</h5>
+            <p>¿Quieres dar consejos sobre cómo mejorar la forma de evaluar, o tienes dudas sobre el personal del plantel?</p>
           </div>
         </div>
         <div class="carousel-item">
           <a href="../proyecto/aa.html">
-            <img src="../img/aa.jpg" class="d-block w-100" alt="...">
+            <img src="../img/aa.jpg" class="d-block w-100" alt="Información">
           </a>
           <div class="carousel-caption d-none d-md-block">
-            <h5>Informacion Aquí.</h5>
-            <p>¿Quíeres Participar En Proyectos, Actividades Academicas, O En Torneos Deportivos?</p>
+            <h5>Información Aquí.</h5>
+            <p>¿Quieres participar en proyectos, actividades académicas o en torneos deportivos?</p>
           </div>
         </div>
         <div class="carousel-item">
           <a href="../proyecto/vi.html">
-            <img src="../img/vi.jpg" class="d-block w-100" alt="...">
+            <img src="../img/vi.jpg" class="d-block w-100" alt="Recupera materias">
           </a>
           <div class="carousel-caption d-none d-md-block">
-            <h5>Informacion Aquí.</h5>
+            <h5>Información Aquí.</h5>
             <p>¿Reprobaste alguna materia y quieres recuperarla?</p>
           </div>
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+        <span class="visually-hidden">Anterior</span>
       </button>
       <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+        <span class="visually-hidden">Siguiente</span>
       </button>
     </div>
-    <br><br><br>
+    <br><br>
   </div>
+
+  <!-- FOOTER -->
   <footer class="diagonal-footer">
     <div class="footer-container container text-center text-md-start">
       <div class="row text-center text-md-start">
@@ -282,7 +306,7 @@
           <h6 class="text-uppercase mb-4">Déjanos Ayudarte</h6>
           <hr class="mb-4">
           <p><a href="#">Tu Cuenta</a></p>
-          <p><a href="#">Tus Ordenes</a></p>
+          <p><a href="#">Tus Órdenes</a></p>
           <p><a href="#">Manejo de Cuenta</a></p>
           <p><a href="#">Ayuda</a></p>
         </div>
@@ -290,7 +314,7 @@
           <h6 class="text-uppercase mb-4">Copia de Ayuda</h6>
           <hr class="mb-4">
           <p><a href="#">Tu Cuenta</a></p>
-          <p><a href="#">Tus Ordenes</a></p>
+          <p><a href="#">Tus Órdenes</a></p>
           <p><a href="#">Manejo de Cuenta</a></p>
           <p><a href="#">Ayuda</a></p>
         </div>
@@ -305,10 +329,10 @@
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
           <h6 class="text-uppercase mb-4">Contacto</h6>
           <hr class="mb-4">
-          <p><a href="#"><i class="fas fa-home me-3"></i>isaxi</a></p>
-          <p><a href="#"><i class="fas fa-envelope me-3"></i>joxcsa@gmail.com</a></p>
-          <p><a href="#"><i class="fas fa-phone me-3"></i>221 111 7565</a></p>
-          <p><a href="#"><i class="fa-solid fa-location-dot me-3"></i>Ubicación</a></p>
+          <p><a href="#"><i class="fas fa-home me-3"></i> isaxi</a></p>
+          <p><a href="#"><i class="fas fa-envelope me-3"></i> joxcsa@gmail.com</a></p>
+          <p><a href="#"><i class="fas fa-phone me-3"></i> 221 111 7565</a></p>
+          <p><a href="#"><i class="fa-solid fa-location-dot me-3"></i> Ubicación</a></p>
         </div>
       </div>
       <hr>
@@ -321,25 +345,16 @@
       </div>
       <div class="text-center">
         <ul class="list-unstyled list-inline">
-          <li class="list-inline-item">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#"><i class="fab fa-youtube"></i></a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#"><i class="fab fa-google-plus"></i></a>
-          </li>
+          <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fab fa-google-plus"></i></a></li>
         </ul>
       </div>
     </div>
   </footer>
+  <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
